@@ -127,7 +127,7 @@ class Config(object):
                 return dir_info
         if allow_ancestors:
             parent = os.path.dirname(abspath)
-            if parent:
+            if parent and parent != '/':
                 return self.directory_from_path(parent)
 
     def report_missing(self, group=None):
