@@ -37,7 +37,8 @@ class DirInfo(object):
 
     @property
     def exists(self):
-        return os.path.exists(self.directory)
+        expected_dot_dir = os.path.join(self.directory, "." + self.vcs)
+        return os.path.exists(expected_dot_dir)
 
     @capture_stdout
     def cmd_exists(self, report_only_missing=False):
@@ -378,7 +379,7 @@ class GitDirInfo(DirInfo):
         output = system("git pull --dry-run")
         output = output.strip()
         output_lines = output.split('\n')
-        if len(output_lines):
+        if output and len(output_lines):
             print("'git pull --dry-run' reports possible actions in %s:" % (
                 self.directory))
             print(output)

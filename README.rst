@@ -16,7 +16,7 @@ Checkoutmanager works on linux, osx and windows.
 Starting to use it
 ------------------
 
-Starting is easy.  Just ``easy_install checkoutmanager`` and run
+Starting is easy.  Just ``pip install checkoutmanager`` and run
 ``checkoutmanager``.
 
 - The first time, you'll get a sample configuration you can copy to

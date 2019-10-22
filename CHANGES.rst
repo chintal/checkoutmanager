@@ -1,10 +1,34 @@
 Changelog of checkoutmanager
 ============================
 
-2.5 (unreleased)
+2.7 (unreleased)
 ----------------
 
 - Nothing changed yet.
+
+
+2.6.1 (2019-09-23)
+------------------
+
+- Fixed small, but essential, README error.
+
+
+2.6 (2019-09-10)
+----------------
+
+- Updated the setup (mostly: buildout version pins) so that the project can be
+  developed/tested again.
+
+- The ``exists`` and ``co`` command used to check only if a directory
+  existed. Now it also checks if the dot directory (``.git``, ``.svn``)
+  exists. This way an empty directory also will get filled with a checkout.
+
+
+2.5 (2016-11-07)
+----------------
+
+- Fix #19: sometimes git remote changes were seen where there were none.
+  [reinout]
 
 
 2.4.1 (2015-09-10)
